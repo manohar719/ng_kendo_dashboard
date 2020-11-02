@@ -70,6 +70,7 @@ kendo-tabstrip {
 	position: relative;
 	z-index: 2;
 	transform: translateX(0);
+	background: #252525;
 
 	#app-title { position: relative; }
 	#app-title::after {
