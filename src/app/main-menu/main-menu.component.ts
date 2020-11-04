@@ -22,7 +22,7 @@ import $ from 'jquery';
     )],
     encapsulation: ViewEncapsulation.None,
     styleUrls: [
-       './../app.style.css'
+       './main-menu.component.scss'
     ],
 })
 export class MainMenuComponent {
@@ -41,10 +41,6 @@ export class MainMenuComponent {
         return 'app';
     }
 
-    @HostBinding('class') protected get appClass(): string {
-        return 'app container-fluid';
-    }
-
     @HostListener('window:resize', ['$event'])
     onResize(event) {
         if ( event.target.innerWidth < 768 ) {
@@ -59,11 +55,11 @@ export class MainMenuComponent {
     }
 
     public toggleNav() {
-        if ( this.navState === 'expanded' ) {
-            this.navState = 'collapsed';
-        } else {
-            this.navState = 'expanded';
-        }
+        // if ( this.navState === 'expanded' ) {
+        //     this.navState = 'collapsed';
+        // } else {
+        //     this.navState = 'expanded';
+        // }
     }
     ngAfterViewInit() {
         $(document).ready(function () {

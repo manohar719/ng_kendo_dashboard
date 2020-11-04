@@ -1,149 +1,128 @@
 <div class="row">
     <nav class="navbar navbar-expand-lg navbar-light sticky-top col-xs-12" [@toggleNav]="navState" 
     *ngIf="showNav()">
-            <a class="navbar-brand" href="#"></a>
+            <a class="navbar-brand" href="#"><img src="../../assets/PGIM_RE_Logo_White_Cropped.png" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile_nav" aria-controls="mobile_nav" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span> 
             </button>
             <div class="navbar-collapse" id="mobile_nav">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0 float-md-right">
+                <li class="nav-item dropdown megamenu-li dmenu all-service-menu">
+                    <span class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" (click)="toggleNav()" aria-expanded="false">All Services</span>
+                    <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01">
+                        <div class="dropdown-wrapper">
+                            <div class="f-block">
+                                <div class="f-menu-block">
+                                    <h6>Favourite</h6>
+                                    <a class="dropdown-item" href="#"> Quick Search</a>
+                                    <a class="dropdown-item" href="#"> Building Search</a>  
+                                </div>
+                                <div class="h-menu-block">
+                                    <h6>Recent History</h6>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#"> Search/Market Information/Admin</a></li>
+                                        <li><a class="dropdown-item" href="#"> User Documentation/Admin/Distribution List</a>  </li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                            <div class="mm-block">
+                                <div class="m-block border-right mb-4">
+                                    <h6>Search</h6>
+                                    <a class="dropdown-item" href="#"> Quick Search</a>
+                                    <a class="dropdown-item" href="#"> Building Search</a>
+                                    <a class="dropdown-item" href="#"> Party Search</a>
+                                    <a class="dropdown-item" href="#"> Map Properties</a>
+                                    <a class="dropdown-item level-1" href="#"> Market Information
+                                        <ul class="dropdown-level-1">
+                                            <li><span>Sales/Rent/Expense Comparables & Market Reports</span></li>
+                                            <li><span>Retail Anchor Tenant Store Sales Data</span></li>
+                                            <li><span>Admin</span></li>
+                                        </ul>
+                                    </a>
+                                    <a class="dropdown-item" href="#"> Report Dictionary</a>
+                                    <a class="dropdown-item" href="#"> Tenant Search</a>
+                                </div>
+                                <div class="m-block border-right mb-4">
+                                    <h6>My Options</h6>
+                                    <a class="dropdown-item" href="#"> My Approvals</a>
+                                    <a class="dropdown-item" href="#"> My Dashboard</a>
+                                    <a class="dropdown-item" href="#"> My Deals</a>
+                                    <a class="dropdown-item" href="#"> My Last Twenty</a>
+                                    <a class="dropdown-item" href="#"> My Loans</a>
+                                    <a class="dropdown-item" href="#"> My Records Mgt Requests</a>
+                                    <a class="dropdown-item" href="#"> My Reminders</a>
+                                    <a class="dropdown-item" href="#"> My Reports</a>
+                                    <a class="dropdown-item" href="#"> My Subscriptions</a>
+                                </div>
+                                <div class="m-block border-right mb-4">
+                                    <h6>User Documentation</h6>
+                                    <a class="dropdown-item" href="#"> iSearch</a>
+                                    <a class="dropdown-item" href="#"> Asset Management SOP</a>
+                                    <a class="dropdown-item" href="#">Compliance SOP</a>
+                                    <a class="dropdown-item" href="#"> Corporate Governance</a>
+                                    <a class="dropdown-item" href="#">Delegation of Authority</a>
+                                    <a class="dropdown-item" href="#"> Forms & Exhibits</a>
+                                    <a class="dropdown-item" href="#">Information Technology SOP</a>
+                                    <a class="dropdown-item" href="#"> Investment & Risk SOP</a>
+                                    <a class="dropdown-item" href="#"> Investment Management Agreements</a>
+                                    <a class="dropdown-item" href="#">Models</a>
+                                    <a class="dropdown-item" href="#"> Origination SOP</a>
+                                    <a class="dropdown-item" href="#">General Information</a>
+                                    <a class="dropdown-item" href="#">User Guides</a>
+                                    <a class="dropdown-item" href="#">Archive</a>
+                                    <a class="dropdown-item level-1" href="#"> Admin
+                                        <ul class="dropdown-level-1">
+                                            <li><span>Distribution List</span></li>
+                                            <li><span>Document Group</span></li>
+                                            <li><span>Category</span></li>
+                                            <li><span>Document Group Categories</span></li>
+                                        </ul>
+                                    </a>
+                                </div>
+                                <div class="m-block">
+                                    <h6>Documents</h6>
+                                </div>
+                                <div class="m-block border-right mb-4">
+                                    <h6>PruXchange</h6>
+                                </div>
+                               <div class="m-block border-right mb-4">
+                                    <h6>Origination</h6>
+                                </div>
+                                <div class="m-block mb-4">
+                                    <h6>Asset Management & Servicing</h6>
+                                </div>
+                                <div class="m-block mb-4 border-right">
+                                    <h6>Accounting & Finance</h6>
+                                </div>
+                                <div class="m-block border-right mb-4">
+                                    <h6>Risk Management</h6>
+                                </div>
+                               <div class="m-block border-right mb-4">
+                                    <h6>Trade Management</h6>
+                                </div>
+                                <div class="m-block mb-4">
+                                    <h6>Management Reporting</h6>
+                                </div>
+                                <div class="m-block border-right mb-4">
+                                    <h6>Workflow & Requests</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
             </ul>
             <ul class="navbar-nav navbar-light">
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Search</a></li>
                 <li class="nav-item dmenu dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Services
+                    Login
                     </a>
-                    <div class="dropdown-menu sm-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Software Development</a>
-                        <a class="dropdown-item" href="#">Web Designing & Development</a>
-                        <a class="dropdown-item" href="#">Mobile Application</a>
-                        <a class="dropdown-item" href="#">Business Solutions & Business Process</a>
-                        <a class="dropdown-item" href="#">Digital Marketing & SEO Services</a>
-                        <a class="dropdown-item" href="#">Web Hosting & Maintenance</a>
-                        <a class="dropdown-item" href="#">Cyber Security</a>
-                        <a class="dropdown-item" href="#">Block Chain Implementation</a>
-                        <a class="dropdown-item" href="#">Big Data</a>
-                    </div>
                 </li>
-                <!--========-->
-                <li class="nav-item dropdown megamenu-li dmenu">
-                    <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Services</a>
-                    <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01">
-                        <div class="row">
-                            <div class="col-sm-6 col-lg-3 border-right mb-4">
-                                <h6>Ecommerce</h6>
-                                <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> Magento Development</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> Magento 2 Migration</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> Odoo ERP</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> Mobile Commerce</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> CRM for Commerce</a>
-                            </div>
-                           <div class="col-sm-6 col-lg-3 border-right mb-4">
-                                <h6>LAMP Technology</h6>
-                                <a class="dropdown-item" href="#"><i class="fab fa-php"></i> PHP Website Development</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-circle"></i> Phalcon Development</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-laravel"></i> Laravel Development</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-wordpress-simple"></i> WordPress Development</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-php"></i> Symfony Development</a>
-                            </div>
-                            <div class="col-sm-6 col-lg-3 border-right mb-4">
-                                <h6>Mobile</h6>
-                                <a class="dropdown-item" href="#"><i class="fab fa-apple"></i> iPhone App Development</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-android"></i> Android App Development</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-mobile-alt"></i> Phone Gap App Development</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-tablet-alt"></i> Hybrid App Development</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-mobile-alt"></i> Ionic Development</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-tablet-alt"></i> React Native Development</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-mobile-alt"></i> Xamarin App Development</a>
-                            </div>
-                            <div class="col-sm-6 col-lg-3 mb-4">
-                                <h6>Node.js & MongoDB</h6>
-                                <a class="dropdown-item" href="#"><i class="fas fa-cubes"></i> Full Stack Development</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-cube"></i> MEAN Stack</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-angular"></i> AngularJS</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-node-js"></i> Node.JS Development</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-leaf fa-rotate-90"></i> MongoDB Development</a>
-                            </div>
-                        </div>
-                         <div class="row">
-                            <div class="col-sm-6 col-lg-3 border-right mb-4">
-                                <h6>Microsoft Technology</h6>
-                                <a class="dropdown-item" href="#"><i class="fab fa-windows"></i> Microsoft App Development</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-windows"></i> MS Desktop App Development</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-windows"></i> SharePoint Development</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-windows"></i> ASP.NET Development</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-windows"></i> CMS Development</a>
-                            </div>
-                           <div class="col-sm-6 col-lg-3 border-right mb-4">
-                                <h6>Cloud Services</h6>
-                                <a class="dropdown-item" href="#"><i class="fas fa-cloud"></i> DevOps</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-amazon"></i> Amazon Web Services</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-windows"></i> Azure Cloud Service</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-google"></i> Google App Engine Services</a>
-                            </div>
-                            <div class="col-sm-6 col-lg-3 border-right mb-4">
-                                <h6>Enterprise Services</h6>
-                                <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i> Augmented Reality</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i> CRM</a>
-                                <a class="dropdown-item" href="#"><i class="fab fa-buromobelexperte"></i> Enterprise Mobility Services</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-th-large"></i> Blockchain Services</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-briefcase"></i> Business Intelligence</a>
-                            </div>
-                            <div class="col-sm-6 col-lg-3 mb-4">
-                                <h6>Digital Marketing</h6>
-                                <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i> Digital Marketing</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i> PPC Management Services</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i> E-commerce SEO Services</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i> Conversion Rate Optimization</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <!--=========-->
-                <li class="nav-item"><a class="nav-link" href="<?php echo siteURL;?>portfolio.php">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="<?php echo siteURL;?>career.php">Careers</a></li>
-                <li class="nav-item"><a class="nav-link" href="<?php echo siteURL;?>contact-us.php">Contact us</a></li>
        
             </ul>
         </div>
     </nav>
-    <div id="nav" 
-        class="col-xs-3 bg-inverse text-white py-5 k-vbox"
-        [@toggleNav]="navState" 
-        *ngIf="showNav()"
-        >
-        <span id="nav-toggle" class="nav-toggle d-md-none"
-            (click)="toggleNav()">
-            <span class="k-icon k-i-hamburger"></span>
-        </span>
-        <h1 id="app-title">PGIM</h1>
-        <p id="app-subtitle">Real Estate</p>
-        <hr />
-        <p class="h4 mt-5">Direct Links</p>
-        <ul class="nav nav-pills flex-column">
-            <li class="nav-item" id="dashbaord">
-                <a [routerLink]=" ['./dashboard'] " class="nav-link" routerLinkActive="active">Dashboard</a>
-            </li>
-            <li class="nav-item" id="issues">
-                <a [routerLink]=" ['./issues'] " class="nav-link" routerLinkActive="active">Issues</a>
-            </li>
-        </ul>
-        <p class="h4 mt-5">Account</p>
-        <ul class="nav nav-pills flex-column">
-            <li class="nav-item" id="profile">
-                <a [routerLink]=" ['./profile'] " class="nav-link" routerLinkActive="active">My Profile</a>
-            </li>
-            <li class="nav-item" id="signout">
-                <a [routerLink]=" ['./signin'] " class="nav-link" routerLinkActive="active">Sign Out</a>
-            </li>
-        </ul>
-        <hr class="k-flex" />
-        <div id="copy">
-            <p>Copyright &copy; {{year}},<br />
-        </div>
-    </div>
     <main class="col-xs p-4 py-md-5">
         <router-outlet></router-outlet>
     </main>
