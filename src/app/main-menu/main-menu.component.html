@@ -12,11 +12,6 @@
                     <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01">
                         <div class="dropdown-wrapper">
                             <div class="f-block">
-                                <div class="f-menu-block">
-                                    <h6>Favourite</h6>
-                                    <a class="dropdown-item" href="#"> Quick Search</a>
-                                    <a class="dropdown-item" href="#"> Building Search</a>  
-                                </div>
                                 <div class="h-menu-block">
                                     <h6>Recent History</h6>
                                     <ul>
@@ -113,13 +108,26 @@
                 </li>
             </ul>
             <ul class="navbar-nav navbar-light">
-                <li class="nav-item"><a class="nav-link" href="#">Search</a></li>
                 <li class="nav-item dmenu dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Login
+                    <a title="Search" class="nav-link" href="#">
+                        <search-input></search-input>
                     </a>
                 </li>
-       
+                <li class="nav-item dmenu dropdown">
+                    <a title="Notification" class="nav-link" href="#">
+                        <kendo-svg-icon class="icon" [icon]="icons.bell"></kendo-svg-icon>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a title="Graph" class="nav-link" href="#">
+                        <kendo-svg-icon class="icon" [icon]="icons.graph"></kendo-svg-icon>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a title="Add" class="nav-link" href="#">
+                        <kendo-svg-icon class="icon" [icon]="icons.fileAdd"></kendo-svg-icon>
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>

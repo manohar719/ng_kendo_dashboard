@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation, HostBinding, HostListener, ViewChild } fr
 import { animate, state, style, transition, trigger } from '@angular/animations';
 //import { Observable } from 'rxjs/Observable';
 import { Router } from '@angular/router';
+import { graph, fileAdd, bell } from '@progress/kendo-svg-icons';
 import $ from 'jquery';
 
 @Component({
@@ -26,6 +27,7 @@ import $ from 'jquery';
     ],
 })
 export class MainMenuComponent {
+    public icons = { graph, fileAdd, bell};
     private year = new Date().getFullYear();
     public logger = null;
     public navState: string;
