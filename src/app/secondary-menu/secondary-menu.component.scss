@@ -33,6 +33,9 @@
 }
 .menu-icon{
     font-size: 1.4rem;
+    &:hover{
+        color: #bfb200;
+    }
 }
 .side-menu{
     width: 300px;
