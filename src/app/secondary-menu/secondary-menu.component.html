@@ -1,4 +1,16 @@
 <nav class="secondary-nav">
+    <div class="menu-bar">
+        <kendo-svg-icon (click)="toggleSideMenu()" class="menu-icon icon" [icon]="icons.menu"></kendo-svg-icon>
+    </div>
+    <div class="side-menu" [@toggleSideMenu]="navState">
+        <span class="side-menu-close">
+            <kendo-svg-icon (click)="toggleSideMenu()" class="close-icon icon" [icon]="icons.x"></kendo-svg-icon>
+        </span>
+        <accordion 
+            [options]="options" 
+            [menus]="menus">
+        </accordion>
+    </div>
     <p class="para">Blackstone 2018 Industrial Portfolio | Tracking # 71222 | Loan # 706110512 | Product: Core | Global Region: Americas | Capital Source: General Account | Currency: USD</p>
     <ul class="right-menu">
         <li class="nav-item">

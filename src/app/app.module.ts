@@ -13,6 +13,7 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
 import { SecondaryMenuComponent } from './secondary-menu/secondary-menu.component';
 import { ProfileComponent } from './profile/profile/profile.component';
 import { SearchComponent } from './components/search/search.component';
+import { SideMenuComponent } from './side-menu/side-menu.component'; 
 
 import { SHARED_MODULES } from './app.common';
 
@@ -33,7 +34,8 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
     ProfileComponent,
     MainMenuComponent,
     SecondaryMenuComponent,
-    SearchComponent
+    SearchComponent,
+    SideMenuComponent
   ],
   imports: [
     BrowserModule,

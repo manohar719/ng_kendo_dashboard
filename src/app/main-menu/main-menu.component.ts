@@ -1,9 +1,7 @@
 import { Component, ViewEncapsulation, HostBinding, HostListener, ViewChild } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-//import { Observable } from 'rxjs/Observable';
 import { Router } from '@angular/router';
 import { graph, fileAdd, bell } from '@progress/kendo-svg-icons';
-import $ from 'jquery';
 
 @Component({
     selector: 'main-menu',
@@ -57,13 +55,7 @@ export class MainMenuComponent {
         return this.router.url !== '/signin';
     }
 
-    public toggleNav() {
-        if ( this.navState === 'expanded' ) {
-            this.navState = 'collapsed';
-        } else {
-            this.navState = 'expanded';
-        }
-    }
+    
     public toggleMenu() {
         this.megaMenu = !this.megaMenu
     }
