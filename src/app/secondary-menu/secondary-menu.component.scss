@@ -1,0 +1,27 @@
+.secondary-nav{
+    background-color: #293743;
+    padding: 8px 15px;
+    text-align: right;
+    .right-menu{
+        width: 60%;
+        margin-bottom: 0;
+        display: inline-block;
+        li{
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+    .left-menu{
+        width:20%
+    }
+}
+.k-dropdown-wrap .k-input{
+    height: calc(0.75rem + 0.5em);
+    font-size: 0.8rem;
+    padding-top: 10px;
+}
+.para{
+    margin-bottom: 0.3rem;
+    color: #fff;
+    font-size: 0.8rem;
+}

@@ -31,6 +31,7 @@ export class MainMenuComponent {
     private year = new Date().getFullYear();
     public logger = null;
     public navState: string;
+    public megaMenu: boolean = false;
     constructor(private router: Router) {
         if ( window.innerWidth < 768 ) {
             this.navState = 'collapsed';
@@ -57,25 +58,16 @@ export class MainMenuComponent {
     }
 
     public toggleNav() {
-        // if ( this.navState === 'expanded' ) {
-        //     this.navState = 'collapsed';
-        // } else {
-        //     this.navState = 'expanded';
-        // }
+        if ( this.navState === 'expanded' ) {
+            this.navState = 'collapsed';
+        } else {
+            this.navState = 'expanded';
+        }
+    }
+    public toggleMenu() {
+        this.megaMenu = !this.megaMenu
     }
     ngAfterViewInit() {
-        $(document).ready(function () {
-          $('.navbar-light .dmenu').hover(function () {
-                  $(this).find('.sm-menu').first().stop(true, true).slideDown(150);
-              }, function () {
-                  $(this).find('.sm-menu').first().stop(true, true).slideUp(105)
-              });
-          }); 
-           
-              $(document).ready(function() {
-            $(".megamenu").on("click", function(e) {
-              e.stopPropagation();
-            });
-          });
+
     }
 }

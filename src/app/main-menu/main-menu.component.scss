@@ -1,8 +1,7 @@
 .navbar{
-    background: #4a4a4a;
+    background: #0b629c;
     padding-top: 0;
     padding-bottom: 0;
-    box-shadow: 1px 3px 4px 0 #adadad33;
     width: 100%;
 }
 .navbar-light .navbar-brand {
@@ -68,6 +67,7 @@
    right: 0;
    padding: 0px;
    background: rgb(68, 76, 84);
+   display: block;
 }
 .megamenu h6{
    margin-left: 21px;
@@ -144,9 +144,6 @@
     padding: 10px 0;
     border-right: 1px solid #636363 !important;
 }
-.all-service-menu{
-    width:400px;
-}
 .f-menu-block{
     min-height: 30vh;
     overflow: visible;
@@ -173,4 +170,13 @@
 .icon{
     color: #fff;
     font-size: 1.2rem;
+}
+.secondary-nav-wrapper{
+    width:100%
+}
+span#dropdown01:after {
+    content: "\e006";
+    font-family: "WebComponentsIcons";
+    padding: 5px;
+    vertical-align: top;
 }
