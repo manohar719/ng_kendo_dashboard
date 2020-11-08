@@ -28,8 +28,9 @@
 }
 .menu-bar{
     position: absolute;
-    top: 19px;
+    top: 15px;
     cursor: pointer;
+    left: 15px;
 }
 .menu-icon{
     font-size: 1.4rem;
@@ -42,10 +43,19 @@
     background: #fff;
     height: 100vh;
     position: absolute;
-    top: 0;
+    top: 100%;
     transition: all 0.3s ease;
     left: -100%;
     box-shadow: 0 0 15px 0px #80808052;
+    p{
+        text-align: left;
+        padding-left: 35px;
+        padding-top: 10px;
+        margin-bottom: 4px;
+        color: #b63b4d;
+        font-size: 14px;
+        font-weight: bold;
+    }
 }
 .side-menu-close{
     position: absolute;
@@ -59,3 +69,39 @@
 .close-icon{
     color: #293843;
 }
+
+.hamburger .line{
+    width: 30px;
+    height: 3px;
+    background-color: rgb(255 255 255 / 0.6);
+    display: block;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hamburger:hover{
+      .line{
+        background-color:rgb(255 255 255);
+      }
+    cursor: pointer;
+  }
+  
+  /* ONE */
+  
+  #hamburger-1.is-active .line:nth-child(2){
+    opacity: 0;
+  }
+  
+  #hamburger-1.is-active .line:nth-child(1){
+    -webkit-transform: translateY(13px) rotate(45deg);
+    -ms-transform: translateY(13px) rotate(45deg);
+    -o-transform: translateY(13px) rotate(45deg);
+    transform: translateY(13px) rotate(45deg);
+  }
+  
+  #hamburger-1.is-active .line:nth-child(3){
+    -webkit-transform: translateY(-4px) rotate(-45deg);
+    -ms-transform: translateY(-4px) rotate(-45deg);
+    -o-transform: translateY(-4px) rotate(-45deg);
+    transform: translateY(-4px) rotate(-45deg);
+  }

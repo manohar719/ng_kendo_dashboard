@@ -1,11 +1,15 @@
 <nav class="secondary-nav">
-    <div class="menu-bar">
-        <kendo-svg-icon (click)="toggleSideMenu()" class="menu-icon icon" [icon]="icons.menu"></kendo-svg-icon>
+    <div class="menu-bar hamburger" [ngClass]="{'is-active': navState=='expanded'}" id="hamburger-1" (click)="toggleSideMenu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
     </div>
+        <!-- <kendo-svg-icon (click)="toggleSideMenu()" class="menu-icon icon" [icon]="icons.menu"></kendo-svg-icon> -->
     <div class="side-menu" [@toggleSideMenu]="navState">
-        <span class="side-menu-close">
+        <!-- <span class="side-menu-close">
             <kendo-svg-icon (click)="toggleSideMenu()" class="close-icon icon" [icon]="icons.x"></kendo-svg-icon>
-        </span>
+        </span> -->
+        <p>Origination</p>
         <accordion 
             [options]="options" 
             [menus]="menus">

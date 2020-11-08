@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation, HostBinding, HostListener, ViewChild } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Router } from '@angular/router';
-import { graph, fileAdd, bell } from '@progress/kendo-svg-icons';
+import { graph, fileAdd, bell, caretAltDown } from '@progress/kendo-svg-icons';
 
 @Component({
     selector: 'main-menu',
@@ -13,8 +13,8 @@ import { graph, fileAdd, bell } from '@progress/kendo-svg-icons';
             state( 'expanded', style({transform: 'translateX(0)'}) ),
             transition( 'collapsed <=> expanded',
                 [
-                    animate( 200 ),
-                    animate( 200 )
+                    animate( 100 ),
+                    animate( 100 )
                 ]
             )
         ]
@@ -25,7 +25,7 @@ import { graph, fileAdd, bell } from '@progress/kendo-svg-icons';
     ],
 })
 export class MainMenuComponent {
-    public icons = { graph, fileAdd, bell};
+    public icons = { graph, fileAdd, bell, caretAltDown};
     private year = new Date().getFullYear();
     public logger = null;
     public navState: string;

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Config, Menu } from './types';
+import { caretAltRight } from '@progress/kendo-svg-icons';
 
 @Component({
   selector: 'accordion',
@@ -10,6 +11,7 @@ export class SideMenuComponent implements OnInit {
   @Input() options;
   @Input() menus: Menu[];
   config: Config;
+  public icons = { caretAltRight };
   
   ngOnInit() {
     this.config = this.mergeConfig(this.options);

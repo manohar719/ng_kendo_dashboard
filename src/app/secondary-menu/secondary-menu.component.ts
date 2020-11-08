@@ -9,12 +9,12 @@ import { Config, Menu } from './../side-menu/types';
     animations: [trigger(
         'toggleSideMenu',
         [
-            state( 'collapsed, void', style({left: '-100%'}) ),
+            state( 'collapsed, void', style({left: '-300px'}) ),
             state( 'expanded', style({left: '0'}) ),
             transition( 'collapsed <=> expanded',
                 [
-                    animate( 200 ),
-                    animate( 200 )
+                    animate( '0.5s' ),
+                    animate( '0.5s' )
                 ]
             )
         ]
@@ -33,9 +33,9 @@ export class SecondaryMenuComponent {
     options: Config = { multi: false };
     menus: Menu[] = [
         { 
-        name: 'Front-end',
+        name: 'Loan Setup & Timeline',
         iconClass: 'fa fa-code',
-        active: true,
+        active: false,
         submenu: [
             { name: 'HTML', url: '#' },
             { name: 'CSS', url: '#' },
@@ -43,7 +43,7 @@ export class SecondaryMenuComponent {
         ]
         },
         { 
-        name: 'Responsive web',
+        name: 'Loan Terms & Parameters',
         iconClass: 'fa fa-mobile',
         active: false,
         submenu: [
@@ -53,7 +53,7 @@ export class SecondaryMenuComponent {
         ]
         },
         { 
-        name: 'Web Browser',
+        name: 'Rates & Spreads',
         iconClass: 'fa fa-globe',
         active: false,
         submenu: [
@@ -61,7 +61,71 @@ export class SecondaryMenuComponent {
             { name: 'Firefox', url: '#' },
             { name: 'Desktop', url: '#' }
         ]
+        },
+        { 
+            name: 'Underwriting',
+            iconClass: 'fa fa-globe',
+            active: false,
+            submenu: [
+                { name: 'Chrome', url: '#' },
+                { name: 'Firefox', url: '#' },
+                { name: 'Desktop', url: '#' }
+            ]
+        },
+        { 
+            name: 'Loans Fees',
+            iconClass: 'fa fa-globe',
+            active: false,
+            submenu: [
+                { name: 'Chrome', url: '#' },
+                { name: 'Firefox', url: '#' },
+                { name: 'Desktop', url: '#' }
+            ]
+        },
+        { 
+            name: 'Commission',
+            iconClass: 'fa fa-globe',
+            active: false,
+            submenu: [
+                { name: 'Chrome', url: '#' },
+                { name: 'Firefox', url: '#' },
+                { name: 'Desktop', url: '#' }
+            ]
+        },
+        { 
+            name: 'Loan Authorization',
+            iconClass: 'fa fa-globe',
+            active: true,
+            submenu: [
+                { name: 'FHA Pricing', url: '#' },
+                { name: 'Pricing Authorization', url: '#' },
+                { name: 'HMDA Cerification', url: '#' },
+                { name: 'Loan Auhtorization', url: '#' },
+                { name: 'Rate Lock Auhtorization', url: '#' },
+                { name: 'Standard Deviation Memo', url: '#' }
+            ]
+        },
+        { 
+            name: 'Loan Tools',
+            iconClass: 'fa fa-globe',
+            active: false,
+            submenu: [
+                { name: 'Chrome', url: '#' },
+                { name: 'Firefox', url: '#' },
+                { name: 'Desktop', url: '#' }
+            ]
+        },
+        { 
+            name: 'Ownership & Terms',
+            iconClass: 'fa fa-globe',
+            active: false,
+            submenu: [
+                { name: 'Chrome', url: '#' },
+                { name: 'Firefox', url: '#' },
+                { name: 'Desktop', url: '#' }
+            ]
         }
+        
     ];
     public toggleSideMenu() {
         if ( this.navState === 'expanded' ) {

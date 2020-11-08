@@ -8,7 +8,7 @@
             <div class="navbar-collapse" id="mobile_nav">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0 float-md-right">
                 <li class="nav-item megamenu-li all-service-menu">
-                    <span class="nav-link" id="dropdown01" (click)="toggleMenu()">All Services</span>
+                    <span class="nav-link" id="dropdown01" (click)="toggleMenu()" [ngClass]="{'active' : megaMenu}">All Services <kendo-svg-icon class="icon icon-caret" [icon]="icons.caretAltDown"></kendo-svg-icon></span>
                     <div *ngIf="megaMenu" class="dropdown-menu megamenu sm-menu border-top">
                         <div class="dropdown-wrapper">
                             <div class="f-block">
