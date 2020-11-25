@@ -61,6 +61,7 @@ export class ModalComponent implements AfterViewChecked {
     this.executePostDisplayActions = true;
     this.visible = true;
     setTimeout(() => {
+      this.revertMaximize()
       this.modalRoot.nativeElement.focus();
       if (this.scrollTopEnable) {
         this.modalBody.nativeElement.scrollTop = 0;
