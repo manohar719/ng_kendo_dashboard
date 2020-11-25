@@ -10,10 +10,15 @@
             <kendo-svg-icon (click)="toggleSideMenu()" class="close-icon icon" [icon]="icons.x"></kendo-svg-icon>
         </span> -->
         <p>Origination</p>
-        <accordion 
+        <ul class="side-menu-ul">
+            <li *ngFor="let item of sideMenu">
+                <a [href]="item.url">{{ item.name }}</a>
+            </li>
+        </ul>
+        <!-- <accordion 
             [options]="options" 
             [menus]="menus">
-        </accordion>
+        </accordion> -->
     </div>
     <p class="para">Blackstone 2018 Industrial Portfolio | Tracking # 71222 | Loan # 706110512 | Product: Core | Global Region: Americas | Capital Source: General Account | Currency: USD</p>
     <ul class="right-menu">
@@ -27,4 +32,4 @@
             <kendo-dropdownlist [data]="listItems"></kendo-dropdownlist>
         </li> 
     </ul>
-</nav>
+</nav>  

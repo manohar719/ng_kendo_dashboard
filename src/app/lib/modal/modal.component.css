@@ -30,6 +30,7 @@
   min-width: 16.25rem;
   min-height: 12.5rem;
   width: 31.25rem;
+  z-index: 1000;
 }
 
 .ui-modal-header {

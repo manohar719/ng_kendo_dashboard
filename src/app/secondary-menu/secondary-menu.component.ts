@@ -31,6 +31,14 @@ export class SecondaryMenuComponent {
     
     //object for side menu
     options: Config = { multi: false };
+    public sideMenu : Array<object> = [
+        { name: 'FHA Pricing', url: '#' },
+        { name: 'Pricing Authorization', url: '#' },
+        { name: 'HMDA Cerification', url: '#' },
+        { name: 'Loan Auhtorization', url: '#' },
+        { name: 'Rate Lock Auhtorization', url: '#' },
+        { name: 'Standard Deviation Memo', url: '#' }
+    ]
     menus: Menu[] = [
         { 
         name: 'Loan Setup & Timeline',

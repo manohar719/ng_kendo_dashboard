@@ -105,3 +105,16 @@
     -o-transform: translateY(-4px) rotate(-45deg);
     transform: translateY(-4px) rotate(-45deg);
   }
+  .side-menu-ul{
+    padding-left: 0;
+    text-align: left;
+    margin-left: 35px;
+    list-style: none;
+    li{
+        padding-left: 5px;
+        a{
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+    }
+  }

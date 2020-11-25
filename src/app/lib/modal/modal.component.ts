@@ -142,8 +142,7 @@ export class ModalComponent implements AfterViewChecked {
     this.preMaximizeRootWidth = this.modalRoot.nativeElement.offsetWidth;
     this.preMaximizeRootHeight = this.modalRoot.nativeElement.offsetHeight;
     this.preMaximizeBodyHeight = this.modalBody.nativeElement.offsetHeight;
-
-    this.modalRoot.nativeElement.style.top = '0px';
+    this.modalRoot.nativeElement.style.top = '109px'; 
     this.modalRoot.nativeElement.style.left = '0px';
     this.modalRoot.nativeElement.style.width = '100vw';
     this.modalRoot.nativeElement.style.height = '100vh';

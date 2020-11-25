@@ -8,7 +8,7 @@ import {DraggableModule} from '../draggable/draggable-module';
   imports: [
     CommonModule,
     ResizableModule,
-    DraggableModule,
+    DraggableModule, 
   ],
   declarations: [
     ModalComponent,
