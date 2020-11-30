@@ -1,4 +1,23 @@
 
+.side-menu{
+  width: 300px;
+  background: #fff;
+  height: 100vh;
+  position: absolute;
+  top: 100%;
+  transition: all 0.3s ease;
+  left: -100%;
+  box-shadow: 0 0 15px 0px #80808052;
+  p{
+      text-align: left;
+      padding-left: 35px;
+      padding-top: 10px;
+      margin-bottom: 4px;
+      color: #d9b860;
+      font-size: 14px;
+      font-weight: bold;
+  }
+}
 .accordion {
     width: 100%;
     max-width: 360px;

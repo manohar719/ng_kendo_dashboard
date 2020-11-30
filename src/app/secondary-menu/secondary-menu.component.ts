@@ -1,7 +1,8 @@
 import { Component, ViewEncapsulation, HostBinding, HostListener, ViewChild } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { menu, x } from '@progress/kendo-svg-icons';
-import { Config, Menu } from './../side-menu/types';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { filter, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
     selector: 'secondary-menu',
@@ -28,113 +29,40 @@ export class SecondaryMenuComponent {
     public icons = { menu, x };
     public navState: string;
     public listItems: Array<string> = ['X-Small', 'Small', 'Medium', 'Large', 'X-Large', '2X-Large'];
+    public menuLink: string;
     
     //object for side menu
-    options: Config = { multi: false };
-    public sideMenu : Array<object> = [
-        { name: 'FHA Pricing', url: '#' },
-        { name: 'Pricing Authorization', url: '#' },
-        { name: 'HMDA Cerification', url: '#' },
-        { name: 'Loan Auhtorization', url: '#' },
-        { name: 'Rate Lock Auhtorization', url: '#' },
-        { name: 'Standard Deviation Memo', url: '#' }
-    ]
-    menus: Menu[] = [
-        { 
-        name: 'Loan Setup & Timeline',
-        iconClass: 'fa fa-code',
-        active: false,
-        submenu: [
-            { name: 'HTML', url: '#' },
-            { name: 'CSS', url: '#' },
-            { name: 'Javascript', url: '#' }
-        ]
-        },
-        { 
-        name: 'Loan Terms & Parameters',
-        iconClass: 'fa fa-mobile',
-        active: false,
-        submenu: [
-            { name: 'Tablets', url: '#' },
-            { name: 'Mobiles', url: '#' },
-            { name: 'Desktop', url: '#' }
-        ]
-        },
-        { 
-        name: 'Rates & Spreads',
-        iconClass: 'fa fa-globe',
-        active: false,
-        submenu: [
-            { name: 'Chrome', url: '#' },
-            { name: 'Firefox', url: '#' },
-            { name: 'Desktop', url: '#' }
-        ]
-        },
-        { 
-            name: 'Underwriting',
-            iconClass: 'fa fa-globe',
-            active: false,
-            submenu: [
-                { name: 'Chrome', url: '#' },
-                { name: 'Firefox', url: '#' },
-                { name: 'Desktop', url: '#' }
-            ]
-        },
-        { 
-            name: 'Loans Fees',
-            iconClass: 'fa fa-globe',
-            active: false,
-            submenu: [
-                { name: 'Chrome', url: '#' },
-                { name: 'Firefox', url: '#' },
-                { name: 'Desktop', url: '#' }
-            ]
-        },
-        { 
-            name: 'Commission',
-            iconClass: 'fa fa-globe',
-            active: false,
-            submenu: [
-                { name: 'Chrome', url: '#' },
-                { name: 'Firefox', url: '#' },
-                { name: 'Desktop', url: '#' }
-            ]
-        },
-        { 
-            name: 'Loan Authorization',
-            iconClass: 'fa fa-globe',
-            active: true,
-            submenu: [
-                { name: 'FHA Pricing', url: '#' },
-                { name: 'Pricing Authorization', url: '#' },
-                { name: 'HMDA Cerification', url: '#' },
-                { name: 'Loan Auhtorization', url: '#' },
-                { name: 'Rate Lock Auhtorization', url: '#' },
-                { name: 'Standard Deviation Memo', url: '#' }
-            ]
-        },
-        { 
-            name: 'Loan Tools',
-            iconClass: 'fa fa-globe',
-            active: false,
-            submenu: [
-                { name: 'Chrome', url: '#' },
-                { name: 'Firefox', url: '#' },
-                { name: 'Desktop', url: '#' }
-            ]
-        },
-        { 
-            name: 'Ownership & Terms',
-            iconClass: 'fa fa-globe',
-            active: false,
-            submenu: [
-                { name: 'Chrome', url: '#' },
-                { name: 'Firefox', url: '#' },
-                { name: 'Desktop', url: '#' }
-            ]
+    public sideMenu;
+
+    constructor(
+        private router: Router,
+        private activatedRoute: ActivatedRoute,
+      ) {
+        this.sideMenu = this.buildSideMenu(this.activatedRoute.root)
+      }
+    
+      ngOnInit() {
+        this.router.events.pipe(
+          filter((event) => event instanceof NavigationEnd),
+          distinctUntilChanged(),
+        ).subscribe(() => {
+            this.sideMenu = this.buildSideMenu(this.activatedRoute.root);
+        })
+      }
+    
+      buildSideMenu(route: ActivatedRoute) {
+        if (route.firstChild) {
+          return this.buildSideMenu(route.firstChild);
         }
-        
-    ];
+        let label = route.routeConfig && route.routeConfig.data ? route.routeConfig.data.breadcrumb : '';
+        let sideMenu = route.routeConfig && route.routeConfig.data ? route.routeConfig.data.subMenu : null;
+        return {
+            label : label,
+            menus : sideMenu
+        }
+    
+    }
+
     public toggleSideMenu() {
         if ( this.navState === 'expanded' ) {
             this.navState = 'collapsed';
@@ -142,7 +70,10 @@ export class SecondaryMenuComponent {
             this.navState = 'expanded';
         }
     }
+    public hasSideMenu() {
+        return this.sideMenu && this.sideMenu.menus && this.sideMenu.menus.length ? true : false
+    }
     ngAfterViewInit() {
-
+        this.hasSideMenu()
     }
 }

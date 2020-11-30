@@ -8,11 +8,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import 'hammerjs';
 
+//common
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+
+//pages
 import { AppComponent } from './app.component';
 import { SigninComponent } from './signin/signin.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { SecondaryMenuComponent } from './secondary-menu/secondary-menu.component';
-import { ProfileComponent } from './profile/profile/profile.component';
+import { OriginationComponent } from './origination/origination.component';
 import { SearchComponent } from './components/search/search.component';
 import { SideMenuComponent } from './side-menu/side-menu.component'; 
 import { ModalComponent } from './components/modal/modal.component';
@@ -35,8 +39,9 @@ import {DraggableModule} from './components/draggable/draggable-module';
   declarations: [
     AppComponent,
     SigninComponent,
-    ProfileComponent,
+    OriginationComponent,
     MainMenuComponent,
+    BreadcrumbComponent,
     SecondaryMenuComponent,
     SearchComponent,
     SideMenuComponent,

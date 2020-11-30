@@ -1,7 +1,7 @@
 .navbar{
     background: #0b629c;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     width: 100%;
 }
 .navbar-light .navbar-brand {
@@ -31,7 +31,8 @@
         transition: all 0.5s ease;
     }
     &.active{
-        color: #fff;
+        color: #d9b860;
+        background: #4f8eb9;
         .icon-caret{
             color: #fff;
             transform: rotate(180deg);
@@ -40,6 +41,7 @@
 }
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
     color: #fff;
+    background: #4f8eb9;
     transition: 0.3s;
     .icon-caret{
         color: #fff;
