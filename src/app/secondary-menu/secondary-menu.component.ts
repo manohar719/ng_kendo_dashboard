@@ -48,6 +48,7 @@ export class SecondaryMenuComponent {
           distinctUntilChanged(),
         ).subscribe(() => {
             this.sideMenu = this.buildSideMenu(this.activatedRoute.root);
+            this.newItemEvent.emit(this.hasSideMenu())
         })
       }
     
@@ -79,5 +80,6 @@ export class SecondaryMenuComponent {
     }
     ngAfterViewInit() {
         this.hasSideMenu()
+        this.newItemEvent.emit(this.hasSideMenu())
     }
 }

@@ -5,7 +5,7 @@ import { OriginationComponent } from './origination/origination.component';
  * (do not place feature module routes here, use an own -routing.module.ts in the feature instead)
  */
 export const AppRoutes: Routes = [
-    { path: '', pathMatch: 'full', redirectTo: '/home', data: {
+    { path: '', pathMatch: 'full', redirectTo: '/', data: {
         breadcrumb: null
         }
     },
