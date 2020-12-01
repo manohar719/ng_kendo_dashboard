@@ -12,6 +12,7 @@
     padding-top: 0px;
     padding-bottom: 0px;
     width: 100%;
+    z-index: 100;
 }
 .navbar-light .navbar-brand {
     color: #fff;
@@ -205,4 +206,5 @@
 .secondary-nav-wrapper{
     width:100%;
     position: fixed;
+    z-index: 99;
 }

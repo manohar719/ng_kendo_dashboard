@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation, HostBinding, HostListener, ViewChild } fr
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Router } from '@angular/router';
 import { graph, fileAdd, bell, caretAltDown } from '@progress/kendo-svg-icons';
+import $ from 'jquery';
 
 @Component({
     selector: 'main-menu',
@@ -24,7 +25,7 @@ import { graph, fileAdd, bell, caretAltDown } from '@progress/kendo-svg-icons';
        './main-menu.component.scss'
     ],
 })
-export class MainMenuComponent {
+export class MainMenuComponent{
     public icons = { graph, fileAdd, bell, caretAltDown};
     private year = new Date().getFullYear();
     public logger = null;
@@ -64,6 +65,6 @@ export class MainMenuComponent {
         this.megaMenu = !this.megaMenu
     }
     ngAfterViewInit() {
-
+        
     }
 }
