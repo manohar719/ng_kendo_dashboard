@@ -5,11 +5,11 @@ import {CommonModule} from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ChartsModule } from '@progress/kendo-angular-charts';
 import 'hammerjs';
 
 //common
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { GraphComponent } from './components/graph/graph.component';
 
 //pages
 import { AppComponent } from './app.component';
@@ -32,6 +32,7 @@ import { DialogsModule } from '@progress/kendo-angular-dialog';
 import { InputsModule } from '@progress/kendo-angular-inputs'; 
 import {ResizableModule} from './components/resizable/resizable-module';
 import {DraggableModule} from './components/draggable/draggable-module';
+import { ChartsModule } from '@progress/kendo-angular-charts';
 
 
 
@@ -46,7 +47,8 @@ import {DraggableModule} from './components/draggable/draggable-module';
     SearchComponent,
     SideMenuComponent,
     ModalComponent,
-    ModalDemoComponent
+    ModalDemoComponent,
+    GraphComponent
   ],
   imports: [
     CommonModule,
