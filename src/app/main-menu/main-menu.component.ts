@@ -29,6 +29,7 @@ export class MainMenuComponent {
     private year = new Date().getFullYear();
     public logger = null;
     public navState: string;
+    public sideMenuActive: boolean = true;
     public megaMenu: boolean = false;
     constructor(private router: Router) {
         if ( window.innerWidth < 768 ) {
@@ -55,6 +56,9 @@ export class MainMenuComponent {
         return this.router.url !== '/signin';
     }
 
+    public showSideMenu(flag : boolean){
+        this.sideMenuActive = flag
+    }
     
     public toggleMenu() {
         this.megaMenu = !this.megaMenu

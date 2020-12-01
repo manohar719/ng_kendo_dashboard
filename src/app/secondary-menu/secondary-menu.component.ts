@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, HostBinding, HostListener, ViewChild } from '@angular/core';
+import { Component, ViewEncapsulation, HostBinding, HostListener, ViewChild, Output, EventEmitter } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { menu, x } from '@progress/kendo-svg-icons';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
@@ -26,8 +26,9 @@ import { filter, distinctUntilChanged } from 'rxjs/operators';
     ],
 })
 export class SecondaryMenuComponent {
+    @Output() newItemEvent = new EventEmitter<boolean>();
     public icons = { menu, x };
-    public navState: string;
+    public navState: string = 'expanded';
     public listItems: Array<string> = ['X-Small', 'Small', 'Medium', 'Large', 'X-Large', '2X-Large'];
     public menuLink: string;
     
@@ -66,9 +67,12 @@ export class SecondaryMenuComponent {
     public toggleSideMenu() {
         if ( this.navState === 'expanded' ) {
             this.navState = 'collapsed';
+            this.newItemEvent.emit(false);
         } else {
             this.navState = 'expanded';
+            this.newItemEvent.emit(true);
         }
+        
     }
     public hasSideMenu() {
         return this.sideMenu && this.sideMenu.menus && this.sideMenu.menus.length ? true : false

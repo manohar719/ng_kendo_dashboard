@@ -1,23 +1,4 @@
 
-.side-menu{
-  width: 300px;
-  background: #fff;
-  height: 100vh;
-  position: absolute;
-  top: 100%;
-  transition: all 0.3s ease;
-  left: -100%;
-  box-shadow: 0 0 15px 0px #80808052;
-  p{
-      text-align: left;
-      padding-left: 35px;
-      padding-top: 10px;
-      margin-bottom: 4px;
-      color: #d9b860;
-      font-size: 14px;
-      font-weight: bold;
-  }
-}
 .accordion {
     width: 100%;
     max-width: 360px;
@@ -79,18 +60,6 @@
   .accordion li.active i {
     color: #b63b4d;
   }
-  
-  /* Show submenu */
-//   .accordion li.active .submenu {
-//     /*
-//       height: 0 -> height: auto;는 transition이 동작하지 않는다.
-//       max-height: 임의의 높이;를 지정하면 transition이 동작하지만 타이밍이 망가진다.
-//       max-height: 1000px;과 max-height: 133px;을 비교해 보라!
-//       height를 1000px으로 transition할 시간에 실제로는 133px정도만 transition하므로 여는 시간이 닫는 시간보다 빠르다.
-//     */
-//     /* max-height: 1000px; */
-//     /* max-height: 133px; */
-//   }
   
   .submenu {
     height: 0;

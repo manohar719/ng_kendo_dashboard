@@ -13,7 +13,7 @@
             [options]="options" 
             [menus]="menus">
         </accordion> -->
-        <side-menu [@toggleSideMenu]="navState" class="side-menu" [sideMenu]="sideMenu.menus" [label]="sideMenu.label"></side-menu>
+        <side-menu *ngIf="hasSideMenu()" [@toggleSideMenu]="navState" class="side-menu" [sideMenu]="sideMenu.menus" [label]="sideMenu.label"></side-menu>
     </div>
     <p class="para">Blackstone 2018 Industrial Portfolio | Tracking # 71222 | Loan # 706110512 | Product: Core | Global Region: Americas | Capital Source: General Account | Currency: USD</p>
     <ul class="right-menu">

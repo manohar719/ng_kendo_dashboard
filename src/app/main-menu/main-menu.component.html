@@ -132,10 +132,10 @@
             </ul>
         </div>
     </nav>
-    <secondary-menu class="secondary-nav-wrapper"></secondary-menu>
+    <secondary-menu class="secondary-nav-wrapper" (newItemEvent)="showSideMenu($event)"></secondary-menu>
     <!-- <side-menu></side-menu> -->
     <app-breadcrumb></app-breadcrumb>
-    <main class="col-xs-12 p-4 py-md-5">
+    <main class="col-xs-12 p-4 py-md-1 container-wrapper" [ngClass]="{'is-active': sideMenuActive}">
         <router-outlet></router-outlet>
     </main>
 </div>
