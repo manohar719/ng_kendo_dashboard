@@ -2,7 +2,6 @@ import { Component, ViewEncapsulation, HostBinding, HostListener, ViewChild } fr
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Router } from '@angular/router';
 import { graph, fileAdd, bell, caretAltDown } from '@progress/kendo-svg-icons';
-import $ from 'jquery';
 
 @Component({
     selector: 'main-menu',
@@ -31,6 +30,7 @@ export class MainMenuComponent{
     public logger = null;
     public navState: string;
     public sideMenuActive: boolean = true;
+    public showGraph: boolean = false;
     public megaMenu: boolean = false;
     constructor(private router: Router) {
         if ( window.innerWidth < 768 ) {
@@ -64,6 +64,11 @@ export class MainMenuComponent{
     public toggleMenu() {
         this.megaMenu = !this.megaMenu
     }
+
+    public onToggleGraph(): void {
+        this.showGraph = !this.showGraph;
+    }
+
     ngAfterViewInit() {
         
     }

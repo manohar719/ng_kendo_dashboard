@@ -119,10 +119,16 @@
                         <kendo-svg-icon class="icon" [icon]="icons.bell"></kendo-svg-icon>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a title="Graph" role="button" class="nav-link" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
+                <li class="nav-item graph-icon">
+                    <a title="Graph" #anchorGraph (click)="onToggleGraph()" class="nav-link" [ngClass]="{'active': showGraph}">
                         <kendo-svg-icon class="icon" [icon]="icons.graph"></kendo-svg-icon>
+                        <kendo-popup [anchor]="anchor" (anchorViewportLeave)="show = false" *ngIf="showGraph">
+                            <div class='content'>
+                              <app-graph></app-graph>
+                            </div>
+                        </kendo-popup>
                     </a>
+                    
                 </li>
                 <li class="nav-item">
                     <a title="Add" class="nav-link" href="#">
@@ -134,8 +140,9 @@
     </nav>
     <secondary-menu class="secondary-nav-wrapper" (newItemEvent)="showSideMenu($event)"></secondary-menu>
     <!-- <side-menu></side-menu> -->
-    <app-breadcrumb></app-breadcrumb>
     <main class="col-xs-12 p-4 py-md-1 container-wrapper" [ngClass]="{'is-active': sideMenuActive}">
+        <app-breadcrumb></app-breadcrumb>
         <router-outlet></router-outlet>
     </main>
+    
 </div>

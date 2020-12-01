@@ -43,6 +43,9 @@
     &.active{
         color: #d9b860;
         background: #4f8eb9;
+        .icon{
+            color: #d9b860;
+        }
         .icon-caret{
             color: #fff;
             transform: rotate(180deg);
@@ -207,4 +210,19 @@
     width:100%;
     position: fixed;
     z-index: 99;
+}
+.graph-icon{
+    .nav-link{
+        position: relative;
+    }
+    .k-animation-container-fixed {
+        position: absolute;
+        top: 100% !important;
+        right: 0% !important;
+        left: auto !important;
+        .content{
+            width: 400px;
+            height: 350px;
+        }
+    }
 }

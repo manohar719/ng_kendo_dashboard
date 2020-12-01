@@ -33,8 +33,7 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
 import {ResizableModule} from './components/resizable/resizable-module';
 import {DraggableModule} from './components/draggable/draggable-module';
 import { ChartsModule } from '@progress/kendo-angular-charts';
-
-
+import { PopupModule } from '@progress/kendo-angular-popup';
 
 @NgModule({
   declarations: [
@@ -62,6 +61,7 @@ import { ChartsModule } from '@progress/kendo-angular-charts';
     ...SHARED_MODULES,
     ButtonsModule,
     DialogsModule,
+    PopupModule,
     InputsModule,
     HttpClientModule,
     IconsModule
